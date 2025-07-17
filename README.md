@@ -1,63 +1,86 @@
-<h2 align="center">Day 29 (14/07/2025)</h2>
 
-## 1. Check if a Number is Even or Odd Using Bit Manipulation
-A problem that introduces fundamental bitwise operations and teaches how to determine number parity using bit-level analysis instead of arithmetic operations.
+<h2 align="center">Day 32 (17/07/2025)</h2>
 
-You are given an integer **n**. Using **bitwise operations**, determine if the number is **even or odd**. Do not use the **modulus operator**. This problem demonstrates how bit manipulation can replace traditional arithmetic operations and is commonly used in **low-level programming** and **performance-critical applications** where bitwise operations are faster than division or modulus operations. The key insight is that the **least significant bit (LSB)** determines the parity of any number.
+## 1. Swap Two Numbers Without Temporary Variable  
+A classic bitwise trick that shows how XOR can be used to **swap values without using extra memory**. This problem reinforces the concept that XOR has properties which make it suitable for in-place data manipulation.
 
-This teaches **bit-level number analysis** and **bitwise parity detection** techniques that are essential for **low-level programming and efficient arithmetic operations**.
+Given two integers **a** and **b**, swap their values using **bitwise XOR** without using any temporary variable. This is a common interview question to test your understanding of bitwise fundamentals.
 
-**Your task:** Determine if a number is even or odd using only bitwise operations without arithmetic operators.
+This teaches **XOR logic**, **in-place data manipulation**, and **memory-efficient algorithms**, useful for **embedded systems** and **interview prep**.
+
+**Your task:** Swap two integers using only bitwise operators.
 
 ### Examples
 
 **Input:**
 ```
-4
+a = 4, b = 7
 ```
 **Output:**
 ```
-Even
+a = 7, b = 4
 ```
 
 ---
 
 **Input:**
+```
+a = 1, b = 2
+```
+**Output:**
+```
+a = 2, b = 1
+```
+
+---
+
+## 2. Find the Only Non-Repeating Element  
+A problem that leverages XOR's property where identical bits cancel out, helping you find a **unique element** in a set of duplicates.
+
+Given an array of integers where every element appears twice **except for one**, find the unique **non-repeating element** using bitwise XOR. This is efficient and requires no additional memory, unlike frequency maps.
+
+This teaches **XOR aggregation**, **data deduplication**, and **memory-optimized searching**, which are highly valuable for **competitive programming** and **low-memory devices**.
+
+**Your task:** Find the single non-repeating number using XOR.
+
+### Examples
+
+**Input:**
+```
+arr = [2, 3, 2]
+```
+**Output:**
+```
+3
+```
+
+---
+
+**Input:**
+```
+arr = [5, 1, 1, 5, 7]
+```
+**Output:**
 ```
 7
 ```
-**Output:**
-```
-Odd
-```
 
 ---
 
-## 2. Get the i-th Bit of a Number
-A problem that demonstrates bit extraction techniques and teaches how to check specific bit positions using bitwise operations for binary data analysis.
+## 3. Find XOR of All Numbers in an Array  
+An introductory problem in **bitwise accumulation** that builds a strong foundation for many XOR-based problems.
 
-Given an integer **n** and a position **i** (0-indexed from the right), find whether the **i-th bit is set (1) or not (0)** using bitwise operations. This operation is fundamental in **bit manipulation** and **binary data processing** where you need to **examine specific bit positions** for flags, permissions, or data encoding. The challenge involves understanding how to isolate and check individual bits using masking and shifting operations.
+Write a function to **compute the XOR of all elements** in the array. XOR acts like a parity check, and this concept is frequently used in **encryption**, **checksum validation**, and **binary data processing**.
 
-This introduces **bit masking** and **position-based bit extraction** techniques that are crucial for **binary data analysis and bit-level data processing**.
+This teaches **bitwise reduction techniques**, **XOR properties**, and is a stepping stone toward **advanced XOR-based algorithms**.
 
-**Your task:** Extract and check the value of a specific bit position using efficient bitwise masking operations.
+**Your task:** Return the result of XORing all numbers in the array.
 
 ### Examples
 
 **Input:**
 ```
-n = 5, i = 0
-```
-**Output:**
-```
-1
-```
-
----
-
-**Input:**
-```
-n = 5, i = 1
+arr = [1, 2, 3]
 ```
 **Output:**
 ```
@@ -66,20 +89,9 @@ n = 5, i = 1
 
 ---
 
-## 3. Set the i-th Bit of a Number
-A problem that teaches bit modification techniques and demonstrates how to set specific bit positions using bitwise operations for binary data manipulation.
-
-You are given an integer **n** and a position **i**. Set the **i-th bit** (0-indexed from right) of the number to **1** using bitwise operations and return the new number. This operation is commonly used in **system programming** and **flag management** where you need to **enable specific bits** for configuration settings, permissions, or status indicators. The challenge involves understanding how to modify individual bits without affecting other bit positions.
-
-This teaches **bit setting** and **selective bit modification** techniques that are essential for **system programming and efficient bit-level data manipulation**.
-
-**Your task:** Set a specific bit position to 1 using bitwise operations while preserving all other bits.
-
-### Examples
-
 **Input:**
 ```
-n = 5, i = 1
+arr = [4, 5, 6]
 ```
 **Output:**
 ```
@@ -87,12 +99,3 @@ n = 5, i = 1
 ```
 
 ---
-
-**Input:**
-```
-n = 8, i = 2
-```
-**Output:**
-```
-12
-```
